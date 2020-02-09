@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="icon" type="image/png" href="https://img.icons8.com/flat_round/64/000000/pinguin--v1.png">"
+    <title>Анкета</title>
+  </head>
+
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      form {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        padding: 40px;
+        min-width: 481px;
+
+        display: grid;
+        grid-gap: 25px;
+
+        border-radius: 12px;
+        background-color: #f7f5f9;
+
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.22);
+      }
+      input:hover {
+        background-color: #ced3f7;
+      }
+
+      input {
+        border: 1px solid transparent;
+        -webkit-appearance: none;
+
+        padding: 13px;
+        border-radius: 6px;
+
+        font-size: 15px;
+        line-height: 20px;
+
+        box-shadow: none;
+      }
+
+      input::-webkit-input-placeholder {
+        /* Chrome */
+        color: #d0c9d6;
+      }
+
+      input:-ms-input-placeholder {
+        /* IE 10+ */
+        color: #d0c9d6;
+      }
+
+      input::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #d0c9d6;
+      }
+
+      input:-moz-placeholder {
+        /* Firefox 4 - 18 */
+        color: #d0c9d6;
+      }
+
+      input[type="text"]:focus {
+        border: 1px solid #854fc8;
+      }
+
+      input[type="submit"] {
+        outline: none;
+        cursor: pointer;
+        background: #6979f8;
+        color: white;
+      }
+
+      input[type="submit"]::-moz-focus-inner {
+        border: 0;
+      }
+
+      .caption {
+        color: #3b3d43;
+
+        font-size: 24px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: 20px;
+
+        user-select: none;
+      }
+    </style>
+       
+    <form method="POST" action="https://digital-spectr.com/ac/academy.php" >
+      <div class="caption">Задать вопрос</div>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        required
+        placeholder="Имя Фамилия Отчество *"
+        pattern="[А-Яа-я \-]*"
+      />
+      <input  
+        type="text"
+        name="phone"
+        id="phone"
+        required
+        placeholder="Телефон *"
+        pattern="[0-9\-\+ ]*"
+      />
+      <input
+        type="text"
+        name="email"
+        id="email"
+        placeholder="Email"
+        pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+      />
+      <input type="submit" value="ОТПРАВИТЬ ЗАПРОС">
+     
+      
+    </form>
+  </body>
+</html>
